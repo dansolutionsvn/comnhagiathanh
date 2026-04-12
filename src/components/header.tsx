@@ -23,13 +23,34 @@ export default function Header() {
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:px-8">
-        <a href="#" className="flex items-center gap-2">
+        {/* Mobile: hamburger left */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="flex flex-col gap-1.5 md:hidden"
+          aria-label="Menu"
+        >
+          <span
+            className={`block h-0.5 w-6 bg-cream transition-transform ${isOpen ? "translate-y-2 rotate-45" : ""}`}
+          />
+          <span
+            className={`block h-0.5 w-6 bg-cream transition-opacity ${isOpen ? "opacity-0" : ""}`}
+          />
+          <span
+            className={`block h-0.5 w-6 bg-cream transition-transform ${isOpen ? "-translate-y-2 -rotate-45" : ""}`}
+          />
+        </button>
+
+        {/* Logo - centered on mobile, left on desktop */}
+        <a
+          href="#"
+          className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0"
+        >
           <Image
             src="/images/logo-horizontal-small.png"
             alt={RESTAURANT.name}
             width={160}
             height={48}
-            className="h-10 w-auto"
+            className="h-10 w-auto rounded-[4px] p-1"
             priority
           />
         </a>
@@ -53,22 +74,8 @@ export default function Header() {
           </a>
         </div>
 
-        {/* Mobile hamburger */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="flex flex-col gap-1.5 md:hidden"
-          aria-label="Menu"
-        >
-          <span
-            className={`block h-0.5 w-6 bg-cream transition-transform ${isOpen ? "translate-y-2 rotate-45" : ""}`}
-          />
-          <span
-            className={`block h-0.5 w-6 bg-cream transition-opacity ${isOpen ? "opacity-0" : ""}`}
-          />
-          <span
-            className={`block h-0.5 w-6 bg-cream transition-transform ${isOpen ? "-translate-y-2 -rotate-45" : ""}`}
-          />
-        </button>
+        {/* Mobile: spacer right to balance hamburger */}
+        <div className="w-6 md:hidden" />
       </nav>
 
       {/* Mobile menu */}
