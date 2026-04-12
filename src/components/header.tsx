@@ -45,14 +45,16 @@ export default function Header() {
           href="#"
           className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0"
         >
-          <Image
-            src="/images/logo-horizontal-small.png"
-            alt={RESTAURANT.name}
-            width={160}
-            height={48}
-            className="h-10 w-auto rounded-[4px] p-1"
-            priority
-          />
+          <div className="rounded-md bg-cream/90 p-1">
+            <Image
+              src="/images/logo-horizontal-small.png"
+              alt={RESTAURANT.name}
+              width={160}
+              height={48}
+              className="h-9 w-auto"
+              priority
+            />
+          </div>
         </a>
 
         {/* Desktop nav */}
