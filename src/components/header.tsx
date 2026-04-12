@@ -22,7 +22,7 @@ export default function Header() {
           : "bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:px-8">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-5 md:py-3 lg:px-8">
         {/* Mobile: hamburger left */}
         <button
           onClick={() => setIsOpen(!isOpen)}
