@@ -1,0 +1,18 @@
+{
+  "name": "Cơm Nhà Gia Thành",
+  "short_name": "Gia Thành",
+  "description": "Cơm Nhà — Vị Quê. 272 Trần Hưng Đạo, Quảng Trị.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFF8F0",
+  "theme_color": "#C8A96E",
+  "lang": "vi-VN",
+  "icons": [
+    {
+      "src": "/images/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
