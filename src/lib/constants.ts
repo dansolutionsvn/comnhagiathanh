@@ -5,6 +5,7 @@ export const RESTAURANT = {
   phone: "0355280935",
   phone2: "0988896047",
   zaloLink: "https://zalo.me/0355280935",
+  facebookLink: "https://www.facebook.com/profile.php?id=61584675572785",
   address: "272 Trần Hưng Đạo, Phường Quảng Trị (Đối diện UBND Thị Xã)",
   googleMapsLink: "https://maps.app.goo.gl/ZpFnNpamRw6LKGEt9",
   googleMapsEmbed:

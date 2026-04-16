@@ -132,7 +132,11 @@ const jsonLd = {
     closes: "14:00",
   },
   acceptsReservations: true,
-  sameAs: [RESTAURANT.zaloLink, RESTAURANT.googleMapsLink],
+  sameAs: [
+    RESTAURANT.zaloLink,
+    RESTAURANT.googleMapsLink,
+    RESTAURANT.facebookLink,
+  ],
 };
 
 export default function RootLayout({
