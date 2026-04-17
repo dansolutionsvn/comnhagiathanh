@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Playfair_Display, Be_Vietnam_Pro } from "next/font/google";
 import { RESTAURANT } from "@/lib/constants";
 import "./globals.css";
+
+const GA_ID = "G-3P101FNFDW";
 
 const SITE_URL = "https://comnhagiathanh.com";
 
@@ -150,6 +153,18 @@ export default function RootLayout({
       className={`${playfair.variable} ${beVietnam.variable} antialiased`}
     >
       <head>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}');
+          `}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
